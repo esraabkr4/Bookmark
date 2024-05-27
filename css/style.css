@@ -1,0 +1,52 @@
+body{
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #FFF2D7;
+}
+:root{
+    --bs-border-style: dotted;
+    --main-color: #fec260;
+    --main-color-rgb: 254, 194, 96;
+    --bs-emphasis-color-rgb: 254, 194, 96;
+}
+*::-moz-selection {
+    background: var(--main-color);
+  }
+*::selection {
+    background: var(--main-color);
+  }
+.heading h1{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+}
+.heading h1::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    height: 35%;
+    background-color: var(--main-color);
+    z-index: -1;
+    -webkit-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+}
+.heading h1:hover::before{
+    top: 30%;
+    height: 70%;
+}
+h2{
+    background: -webkit-gradient(linear, left top, right top, from(green), to(var(--main-color)));
+    background: -o-linear-gradient(left, green, var(--main-color));
+    background: linear-gradient(to right, green, var(--main-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.form-control:focus {
+    border-color: var(--main-color);
+    -webkit-box-shadow: 0 0 0 .25rem rgba(var(--main-color-rgb), .25);
+            box-shadow: 0 0 0 .25rem rgba(var(--main-color-rgb), .25);
+}
+.table{
+    --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), .50);
+}

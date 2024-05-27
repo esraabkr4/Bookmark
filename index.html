@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/bookmark.png" />
+    <link rel="stylesheet" href="./css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <div class="container border-2 border-bottom border-black py-5 ">
+        <div class="heading text-center">
+            <h1 class=" d-inline-block position-relative fw-medium">Bookmarker</h1>
+        </div>
+    </div>
+
+</header>
+<div class="form-div my-4">
+    <div class="container  border-2 border-bottom border-black pt-1  pb-4">
+        <div class="form-header text-center">
+            
+            <h2 class="fw-bolder fs-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i> </h2>
+            
+        </div>
+        <!-- <form> -->
+              <div class="mb-4 mt-3">
+                <label for="siteName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name </label>
+                <input type="text" class="form-control" oninput="validation(this)" id="siteName" placeholder="Bookmark Name"  aria-describedby="validationSiteName" required>
+                <div id="validationSiteName" class="invalid-feedback">
+                    Please provide a valid Site Name.
+                  </div>
+            </div>
+            <div class="mb-4">
+                <label for="siteUrl" class="form-label fw-bold"><i class="fa-solid fa-link"></i> Site URL </label>
+                <input type="text" class="form-control" oninput="validation(this)" id="siteUrl" placeholder="Website URL"  aria-describedby="validationSiteUrl" required>
+                <div id="validationSiteUrl" class="invalid-feedback">
+                    Please provide a valid Site URL.
+                  </div>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-danger bg-gradient px-5" id="submitBTN">Submit</button>
+            </div>
+        <!-- </form> -->
+        
+    </div>
+</div>
+<div class="table-div py-3">
+    <div class="container">
+        <table class="table table-striped text-center">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              
+            </tbody>
+          </table>
+        </div>
+        </div>
+<body>
+    <!-- scripts -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
